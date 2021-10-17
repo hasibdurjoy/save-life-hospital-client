@@ -4,7 +4,9 @@ import {
     onAuthStateChanged,
     getAuth,
     signInWithPopup,
-    GoogleAuthProvider
+    GoogleAuthProvider,
+
+    signOut
 } from "firebase/auth";
 
 
@@ -17,12 +19,18 @@ const useFirebase = () => {
 
     const singInWithGoogle = () => {
         const googleProvider = new GoogleAuthProvider();
-        signInWithPopup(auth, googleProvider)
-            .then((result) => {
-                setUser(result.user);
-            })
+        return signInWithPopup(auth, googleProvider)
     };
 
+
+    //log out
+
+    const logOut = () => {
+        signOut(auth)
+            .then(() => {
+                setUser({});
+            })
+    }
     //observing state change or not
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
@@ -35,7 +43,9 @@ const useFirebase = () => {
 
     return {
         user,
-        singInWithGoogle
+        singInWithGoogle,
+
+        logOut
     }
 };
 
