@@ -1,0 +1,14 @@
+.log-in{
+    padding-top: 50%;
+    padding-bottom: 100px;
+    background-image: url('https://image.freepik.com/free-photo/blur-hospital_1203-7957.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+     /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
