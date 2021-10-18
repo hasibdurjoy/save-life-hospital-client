@@ -1,0 +1,44 @@
+[
+    {
+        "id": "service-1",
+        "name": "Expert Doctors",
+        "description": "here in our hospital we have highly qualified doctors and nurses",
+        "img": "https://image.freepik.com/free-photo/happy-team-successful-doctors-standing-together-hospital-gowns_186202-1737.jpg"
+    },
+    {
+        "id": "service-2",
+        "name": "ICU service",
+        "description": "here in our hospital we have highly qualified doctors and nurses",
+        "img": "https://images.theconversation.com/files/117015/original/image-20160331-28462-qliwnl.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip"
+    },
+    {
+        "id": "service-3",
+        "name": "Patient Bed",
+        "description": "here in our hospital we have highly qualified doctors and nurses",
+        "img": "https://image.freepik.com/free-photo/hospital-room-with-bed-table_43614-220.jpg"
+    },
+    {
+        "id": "service-4",
+        "name": "Digital Pathology",
+        "description": "here in our hospital we have highly qualified doctors and nurses",
+        "img": "https://image.freepik.com/free-photo/pneumonia-diagnosting-covid-19-coronavirus-identification-pandemic-mechanical-lungs-ventilation-machine_116317-4173.jpg"
+    },
+    {
+        "id": "service-5",
+        "name": "Digital OT",
+        "description": "here in our hospital we have highly qualified doctors and nurses",
+        "img": "https://image.freepik.com/free-photo/surgeons-adjusting-oxygen-mask-patient-mouth-operation-theater_107420-64870.jpg"
+    },
+    {
+        "id": "service-6",
+        "name": "Private Nurse",
+        "description": "here in our hospital we have highly qualified doctors and nurses",
+        "img": "https://image.freepik.com/free-photo/healthcare-workers-prevent-virus-insurance-medicine-concept-supportive-professional-female-nurse-doctor-blue-scrubs-stethoscope-show-thumbs-up-approval-smiling_1258-57350.jpg"
+    },
+    {
+        "id": "service-7",
+        "name": "Ambulance service",
+        "description": "here in our hospital we have highly qualified doctors and nurses",
+        "img": "https://image.freepik.com/free-vector/emergency-ambulance-with-coronavirus-concept_23-2148534627.jpg"
+    }
+]

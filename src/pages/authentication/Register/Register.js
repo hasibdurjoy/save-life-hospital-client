@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useHistory } from 'react';
 import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
@@ -7,7 +7,30 @@ import googleIcon from '../../../images/icons/google.png';
 import githubIcon from '../../../images/icons/github.png';
 
 const Register = () => {
-    const { singInWithGoogle } = useAuth();
+    const { singInWithGoogle, registerWithEmailPassword } = useAuth();
+
+    const [name, setName] = useState();
+    const [email, setEmail] = useState();
+    const [password, setPassword] = useState();
+    const history = useHistory();
+
+    const takeName = (e) => {
+        setName(e.target.value);
+    }
+    const takeEmail = (e) => {
+        setEmail(e.target.value);
+    }
+
+    const takePassword = (e) => {
+        setPassword(e.target.value);
+    }
+
+    const newAccountWithEmailPassword = (e) => {
+        e.preventDefault();
+        registerWithEmailPassword(name, email, password);
+        history.push('/login');
+    }
+
     return (
         <div className="d-flex flex-column align-items-center justify-content-center py-2 register">
             <Card className="border-0 shadow px-2 rounded">
@@ -21,10 +44,10 @@ const Register = () => {
                     />
                     <h4>Save Life Hospital</h4>
                     <form className="w-100">
-                        <input className="mt-2 p-2 rounded border-1 w-100" type="email" name="" id="" placeholder="name" required /><br />
-                        <input className="mt-3 p-2 rounded border-1 w-100" type="email" name="" id="" placeholder="email" required /><br />
-                        <input className="mt-3 p-2 rounded border-1 w-100" type="email" name="" id="" placeholder="password" required /><br />
-                        <input className="mt-4 p-2 rounded border-1 w-100 btn btn-danger" type="submit" value="Sign up" />
+                        <input onBlur={takeName} className="mt-2 p-2 rounded border-1 w-100" type="text" name="" id="" placeholder="name" required /><br />
+                        <input onBlur={takeEmail} className="mt-3 p-2 rounded border-1 w-100" type="email" name="" id="" placeholder="email" required /><br />
+                        <input onBlur={takePassword} className="mt-3 p-2 rounded border-1 w-100" type="password" name="" id="" placeholder="password" required /><br />
+                        <input onClick={newAccountWithEmailPassword} className="mt-4 p-2 rounded border-1 w-100 btn btn-danger" type="submit" value="Sign up" />
                     </form>
                     <p className="mt-4">
                         <Link to="/register" className="text-danger">already have an account? sign in now</Link>

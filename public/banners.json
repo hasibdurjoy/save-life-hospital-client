@@ -10,5 +10,11 @@
         "header": "Need Ambulance service? We have 24/7 Ambulance call:009988776655",
         "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae facilis aspernatur, illo recusandae sint fuga culpa ratione cumque dolores reiciendis.",
         "img": "https://i.ibb.co/09YpLxP/png-transparent-ambulance-transparency-ambulance-van-car-ambulance-removebg-preview.png"
+    },
+    {
+        "id": "banner-3",
+        "header": "Need ICU bed service",
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae facilis aspernatur, illo recusandae sint fuga culpa ratione cumque dolores reiciendis.",
+        "img": "https://image.freepik.com/free-photo/hemodialysis-machine-hospital-ward_11208-1841.jpg"
     }
 ]

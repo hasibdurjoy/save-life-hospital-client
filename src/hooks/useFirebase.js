@@ -5,6 +5,9 @@ import {
     getAuth,
     signInWithPopup,
     GoogleAuthProvider,
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    updateProfile,
 
     signOut
 } from "firebase/auth";
@@ -13,11 +16,40 @@ import {
 initializeAuthentication();
 
 const useFirebase = () => {
+
     const [user, setUser] = useState();
+    const [error, setError] = useState();
     const auth = getAuth();
 
 
-    const singInWithGoogle = () => {
+    const registerWithEmailPassword = (name, email, password) => {
+        console.log(email, password);
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((result) => {
+                console.log(result.user);
+                updateProfile(auth.currentUser, { displayName: name })
+                    .then(result => { })
+            })
+            .catch((error) => {
+                setError(error.message);
+            });
+    }
+
+    const logInWithEmailPassword = (email, password) => {
+        signInWithEmailAndPassword(auth, email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                setError('')
+            })
+            .catch(error => {
+                setError(error.message);
+            })
+    }
+
+
+
+    const signInWithGoogle = () => {
         const googleProvider = new GoogleAuthProvider();
         return signInWithPopup(auth, googleProvider)
     };
@@ -43,8 +75,9 @@ const useFirebase = () => {
 
     return {
         user,
-        singInWithGoogle,
-
+        signInWithGoogle,
+        registerWithEmailPassword,
+        logInWithEmailPassword,
         logOut
     }
 };

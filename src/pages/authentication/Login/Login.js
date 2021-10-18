@@ -1,17 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
+import { useHistory, useLocation } from 'react-router';
 import './Login.css';
 import googleIcon from '../../../images/icons/google.png';
 import githubIcon from '../../../images/icons/github.png';
-const Login = () => {
 
-    const { singInWithGoogle } = useAuth();
+
+const Login = () => {
+    const [email, setEmail] = useState();
+    const [password, setPassword] = useState();
+
+    const history = useHistory();
+    const location = useLocation();
+    const redirect_url = location.state?.from || "/home";
+
+    const { signInWithGoogle, logInWithEmailPassword } = useAuth();
+
+    const logInWithGoogle = () => {
+        signInWithGoogle()
+            .then(result => {
+                history.push(redirect_url);
+            })
+    }
+
+    const takeEmail = (e) => {
+        setEmail(e.target.value);
+    }
+
+    const takePassword = (e) => {
+        setPassword(e.target.value);
+    }
+
+    const signInWithEmailPassword = (e) => {
+        e.preventDefault();
+        logInWithEmailPassword(email, password)
+        /* .then(result => {
+            history.push(redirect_url);
+        }) */
+    }
     return (
         <div className="d-flex flex-column align-items-center justify-content-center py-2 log-in">
-            {/* <img src="https://i.ibb.co/GFDfGcp/Hospital-Logo-1.png" alt="" height="100px" className=" mb-4 w-25 rounded" /> */}
-
             <Card className="border-0 shadow px-2 rounded">
                 <Card.Body>
                     <div>
@@ -25,17 +55,17 @@ const Login = () => {
                         <h4>Save Life Hospital</h4>
                     </div>
                     <form className="w-100">
-                        <input className="mt-2 p-2 rounded border-1 w-100" type="email" name="" id="" placeholder="email" required /><br />
-                        <input className="mt-4 mb-2 p-2 rounded border-1 w-100" type="email" name="" id="" placeholder="password" required /><br />
-                        <input className="mt-4 p-2 rounded border-1 w-100 btn btn-danger" type="submit" value="Sign In" />
+                        <input onBlur={takeEmail} className="mt-2 p-2 rounded border-1 w-100" type="email" name="" id="" placeholder="email" required /><br />
+                        <input onBlur={takePassword} className="mt-4 mb-2 p-2 rounded border-1 w-100" type="password" name="" id="" placeholder="password" required /><br />
+                        <input onClick={signInWithEmailPassword} className="mt-4 p-2 rounded border-1 w-100 btn btn-danger" type="submit" value="Sign In" />
                     </form>
                     <p className="mt-4">
                         <Link to="/register" className="text-danger">don't have an account? sign up now</Link>
                     </p>
                     <hr />
                     <p>OR</p>
-                    <button className="btn btn-outline-secondary w-100 " onClick={singInWithGoogle}><img src={googleIcon} alt="" /> Sign in with Google</button>
-                    <button className="btn btn-outline-secondary w-100 mt-3" onClick={singInWithGoogle}><img src={githubIcon} alt="" /> Sign in with Github</button>
+                    <button className="btn btn-outline-secondary w-100 " onClick={logInWithGoogle}><img src={googleIcon} alt="" /> Sign in with Google</button>
+                    <button className="btn btn-outline-secondary w-100 mt-3" onClick={logInWithGoogle}><img src={githubIcon} alt="" /> Sign in with Github</button>
                 </Card.Body>
             </Card>
         </div>
