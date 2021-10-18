@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Carousel } from 'react-bootstrap';
 import './Banner.css';
-import BannerCarousel from './BannerCarousel/BannerCarousel';
+import BannerCarousel from '../BannerCarousel/BannerCarousel';
 
 const Banner = () => {
     const [banners, setBanners] = useState([])

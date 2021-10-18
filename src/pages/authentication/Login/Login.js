@@ -10,9 +10,20 @@ const Login = () => {
     const { singInWithGoogle } = useAuth();
     return (
         <div className="d-flex flex-column align-items-center justify-content-center py-2 log-in">
-            <img src="https://i.ibb.co/GFDfGcp/Hospital-Logo-1.png" alt="" height="100px" className=" mb-4 w-25 rounded" />
+            {/* <img src="https://i.ibb.co/GFDfGcp/Hospital-Logo-1.png" alt="" height="100px" className=" mb-4 w-25 rounded" /> */}
+
             <Card className="border-0 shadow px-2 rounded">
                 <Card.Body>
+                    <div>
+                        <img
+                            alt=""
+                            src="https://seeklogo.com/images/H/hospital-clinic-plus-logo-7916383C7A-seeklogo.com.png"
+                            width="60"
+                            height="60"
+                            className="d-inline-block align-top"
+                        />
+                        <h4>Save Life Hospital</h4>
+                    </div>
                     <form className="w-100">
                         <input className="mt-2 p-2 rounded border-1 w-100" type="email" name="" id="" placeholder="email" required /><br />
                         <input className="mt-4 mb-2 p-2 rounded border-1 w-100" type="email" name="" id="" placeholder="password" required /><br />
