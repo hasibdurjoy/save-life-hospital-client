@@ -9,6 +9,7 @@ import Register from './pages/authentication/Register/Register';
 import Footer from './pages/shared/Footer/Footer';
 import Services from './pages/home/Services/Services/Services';
 import NotFound from './pages/shared/NotFound/NotFound';
+import ServiceDetails from './pages/home/Services/ServiceDetails/ServiceDetails';
 
 function App() {
   return (
@@ -21,10 +22,11 @@ function App() {
             <Route path="/home"><Home /></Route>
             <Route path="/login"><Login /></Route>
             <Route path="/register"><Register /></Route>
-            <Route path="/services"><Services /></Route>
+            <Route exact path="/services"><Services /></Route>
+            <Route path="/services/:serviceID"><ServiceDetails /></Route>
             <Route path="*"><NotFound /></Route>
           </Switch>
-          <Footer />
+          {/* <Footer /> */}
         </Router>
       </AuthProvider>
     </div>
