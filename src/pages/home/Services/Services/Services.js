@@ -9,7 +9,7 @@ const Services = () => {
         fetch('services.json')
             .then(res => res.json())
             .then(data => setServices(data))
-    }, [])
+    }, []);
     return (
         <Container className="mt-4">
             <h2>Services</h2>

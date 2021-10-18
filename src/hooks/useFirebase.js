@@ -26,7 +26,6 @@ const useFirebase = () => {
         console.log(email, password);
         createUserWithEmailAndPassword(auth, email, password)
             .then((result) => {
-                console.log(result.user);
                 updateProfile(auth.currentUser, { displayName: name })
                     .then(result => { })
             })
@@ -39,7 +38,6 @@ const useFirebase = () => {
         signInWithEmailAndPassword(auth, email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user);
                 setError('')
             })
             .catch(error => {

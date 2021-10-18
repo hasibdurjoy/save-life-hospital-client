@@ -12,7 +12,7 @@ const Register = () => {
     const [name, setName] = useState();
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
-    const history = useHistory();
+    // const history = useHistory();
 
     const takeName = (e) => {
         setName(e.target.value);
@@ -28,7 +28,7 @@ const Register = () => {
     const newAccountWithEmailPassword = (e) => {
         e.preventDefault();
         registerWithEmailPassword(name, email, password);
-        history.push('/login');
+        // history.push('/login');
     }
 
     return (

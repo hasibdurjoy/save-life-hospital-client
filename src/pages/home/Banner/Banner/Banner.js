@@ -10,7 +10,6 @@ const Banner = () => {
             .then(res => res.json())
             .then(data => setBanners(data))
     }, []);
-    console.log(banners);
     return (
         <div className="banner-container">
             <Carousel>
