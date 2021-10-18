@@ -3,18 +3,18 @@ import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import './Login.css';
-import googleIcon from '../../../images/icons/google.png'
-import githubIcon from '../../../images/icons/github.png'
-
+import googleIcon from '../../../images/icons/google.png';
+import githubIcon from '../../../images/icons/github.png';
 const Login = () => {
 
     const { singInWithGoogle } = useAuth();
     return (
-        <div className="d-flex align-items-center justify-content-center py-5 log-in">
+        <div className="d-flex flex-column align-items-center justify-content-center py-2 log-in">
+            <img src="https://i.ibb.co/GFDfGcp/Hospital-Logo-1.png" alt="" height="100px" className=" mb-4 w-25 rounded" />
             <Card className="border-0 shadow px-2 rounded">
                 <Card.Body>
                     <form className="w-100">
-                        <input className="mt-4 mb-2 p-2 rounded border-1 w-100" type="email" name="" id="" placeholder="email" required /><br />
+                        <input className="mt-2 p-2 rounded border-1 w-100" type="email" name="" id="" placeholder="email" required /><br />
                         <input className="mt-4 mb-2 p-2 rounded border-1 w-100" type="email" name="" id="" placeholder="password" required /><br />
                         <input className="mt-4 p-2 rounded border-1 w-100 btn btn-danger" type="submit" value="Sign In" />
                     </form>
@@ -23,7 +23,7 @@ const Login = () => {
                     </p>
                     <hr />
                     <p>OR</p>
-                    <button className="btn btn-outline-secondary w-100 mt-3" onClick={singInWithGoogle}><img src={googleIcon} alt="" /> Sign in with Google</button>
+                    <button className="btn btn-outline-secondary w-100 " onClick={singInWithGoogle}><img src={googleIcon} alt="" /> Sign in with Google</button>
                     <button className="btn btn-outline-secondary w-100 mt-3" onClick={singInWithGoogle}><img src={githubIcon} alt="" /> Sign in with Github</button>
                 </Card.Body>
             </Card>

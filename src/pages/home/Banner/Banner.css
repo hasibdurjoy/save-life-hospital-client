@@ -1,0 +1,4 @@
+.banner-container{
+    background: rgb(241,231,231);
+background: linear-gradient(90deg, rgba(241,231,231,0.9528186274509804) 0%, rgba(179,222,232,0.5830707282913166) 79%, rgba(185,193,195,0) 100%);
+}

@@ -2,11 +2,12 @@ import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
+import './Header.css';
 
 const Header = () => {
     const { user, logOut } = useAuth();
     return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar className="header-container" collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
                 <Navbar.Brand as={Link} to="/home">
                     <img
@@ -21,17 +22,18 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
+                        <Nav.Link as={Link} to="/home">Home</Nav.Link>
                     </Nav>
                     <Nav>
 
                         {
                             user?.email ? <>
-                                <Nav.Link as={Link} to="/login">{user?.displayName}</Nav.Link>
+                                <Nav.Link as={Link} to="/login" className="btn btn-outline-light rounded-pill text-light">{user?.displayName}</Nav.Link>
                                 <Nav.Link onClick={logOut} as={Link} to="/" className="btn btn-danger rounded-pill text-light">Logout</Nav.Link>
                             </>
                                 : <>
-                                    <Nav.Link as={Link} to="/login">login</Nav.Link>
-                                    <Nav.Link as={Link} to="/login">Register</Nav.Link>
+                                    <Nav.Link as={Link} to="/login" className="btn btn-danger px-4 rounded-pill text-light">Login</Nav.Link>
+                                    <Nav.Link as={Link} to="/register" className="btn btn-primary px-4 rounded-pill text-light">Register</Nav.Link>
                                 </>
                         }
                     </Nav>

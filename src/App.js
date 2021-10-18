@@ -5,6 +5,7 @@ import AuthProvider from './context/AuthProvider';
 import Header from './pages/shared/Header/Header';
 import Login from './pages/authentication/Login/Login';
 import Home from './pages/home/Home.js/Home';
+import Register from './pages/authentication/Register/Register';
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
             </Route>
             <Route path="/login">
               <Login />
+            </Route>
+            <Route path="/register">
+              <Register />
             </Route>
           </Switch>
         </Router>
