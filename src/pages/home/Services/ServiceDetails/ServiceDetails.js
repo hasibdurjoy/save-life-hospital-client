@@ -16,18 +16,26 @@ const ServiceDetails = () => {
     }, []);
     return (
         <div>
-            <div>
-                <div className="col-lg-6 col-md-6 col-4">
-                    <img src={service.img} alt="" height="400" />
-                </div>
-                <div className="col-lg-6 col-md-6 col-6 d-flex align-items-center pe-5">
-                    <div>
-                        <h2>{service.name}</h2>
-                        <p>{service.description}</p>
+            <div className="px-5">
+                <div className="row">
+                    <div className="col-lg-6 col-md-6 col-4">
+                        <img src={service.img} alt="" height="400" />
+                    </div>
+                    <div className="col-lg-6 col-md-6 col-6 d-flex align-items-center pe-5">
+                        <div>
+                            <h2>{service.name}</h2>
+                            <p>{service.description}</p>
+                            <button className="btn btn-danger rounded-pill">Book Now</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <Doctors></Doctors>
+            {
+                serviceID === 'service-1' && <Doctors></Doctors>
+            }
+            {
+                serviceID === 'service-6' && <Doctors></Doctors>
+            }
         </div>
     );
 };

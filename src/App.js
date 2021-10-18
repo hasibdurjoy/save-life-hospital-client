@@ -25,7 +25,7 @@ function App() {
             <Route path="/login"><Login /></Route>
             <Route path="/register"><Register /></Route>
             <Route exact path="/services"><Services /></Route>
-            <Route exact path="/doctors"><Doctors /></Route>
+            <PrivateRoute exact path="/doctors"><Doctors /></PrivateRoute>
             <PrivateRoute path="/services/:serviceID"><ServiceDetails /></PrivateRoute>
             <Route path="*"><NotFound /></Route>
           </Switch>
