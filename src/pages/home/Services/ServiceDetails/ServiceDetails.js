@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import Doctors from '../Doctors/Doctors';
 
 const ServiceDetails = () => {
     const { serviceID } = useParams();
@@ -26,6 +27,7 @@ const ServiceDetails = () => {
                     </div>
                 </div>
             </div>
+            <Doctors></Doctors>
         </div>
     );
 };

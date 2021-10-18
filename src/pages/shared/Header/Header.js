@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <Navbar className="header-container" collapseOnSelect expand="lg" variant="light">
             <Container>
-                <Navbar.Brand as={Link} to="/home">
+                <Navbar.Brand as={Link} to="/">
                     <img
                         alt=""
                         src="https://seeklogo.com/images/H/hospital-clinic-plus-logo-7916383C7A-seeklogo.com.png"
@@ -26,8 +26,10 @@ const Header = () => {
                     <Nav className="me-auto">
                         <Nav.Link as={Link} to="/home">Home</Nav.Link>
                         <Nav.Link as={Link} to="/services">Services</Nav.Link>
-                        <Nav.Link as={Link} to="/home">Home</Nav.Link>
-                        <Nav.Link as={Link} to="/home">Home</Nav.Link>
+                        <Nav.Link as={Link} to="/doctors">Doctors</Nav.Link>
+                        <Nav.Link as={Link} to="/pathology">Pathology</Nav.Link>
+                        <Nav.Link as={Link} to="/ambulances">Ambulances</Nav.Link>
+                        <Nav.Link as={Link} to="/nurses">Nurses</Nav.Link>
                     </Nav>
                     <Nav>
 

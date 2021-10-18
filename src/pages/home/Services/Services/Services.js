@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
-import AmbulanceService from '../AmbulanceService/AmbulanceService';
+import Doctors from '../Doctors/Doctors';
 import Service from '../Service/Service';
 
 const Services = () => {
@@ -19,6 +19,7 @@ const Services = () => {
                     services.map(service => <Service key={service.id} service={service}></Service>)
                 }
             </Row>
+            <Doctors></Doctors>
         </Container>
     );
 };

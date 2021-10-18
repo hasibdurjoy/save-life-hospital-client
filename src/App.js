@@ -11,6 +11,7 @@ import Services from './pages/home/Services/Services/Services';
 import NotFound from './pages/shared/NotFound/NotFound';
 import ServiceDetails from './pages/home/Services/ServiceDetails/ServiceDetails';
 import PrivateRoute from './pages/authentication/PrivateRoute/PrivateRoute';
+import Doctors from './pages/home/Services/Doctors/Doctors';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/login"><Login /></Route>
             <Route path="/register"><Register /></Route>
             <Route exact path="/services"><Services /></Route>
+            <Route exact path="/doctors"><Doctors /></Route>
             <PrivateRoute path="/services/:serviceID"><ServiceDetails /></PrivateRoute>
             <Route path="*"><NotFound /></Route>
           </Switch>

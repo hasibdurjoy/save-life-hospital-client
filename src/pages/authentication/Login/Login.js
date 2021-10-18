@@ -16,7 +16,7 @@ const Login = () => {
     const location = useLocation();
     const redirect_url = location.state?.from || "/home";
 
-    const { signInWithGoogle, logInWithEmailPassword } = useAuth();
+    const { signInWithGoogle, signInWithGithub, logInWithEmailPassword } = useAuth();
 
     const logInWithGoogle = () => {
         signInWithGoogle()
@@ -24,6 +24,13 @@ const Login = () => {
                 history.push(redirect_url);
             })
     }
+    const logInWithGithub = () => {
+        signInWithGithub()
+            .then(result => {
+                history.push(redirect_url);
+            })
+    }
+
 
     const takeEmail = (e) => {
         setEmail(e.target.value);
@@ -65,7 +72,7 @@ const Login = () => {
                     <hr />
                     <p>OR</p>
                     <button className="btn btn-outline-secondary w-100 " onClick={logInWithGoogle}><img src={googleIcon} alt="" /> Sign in with Google</button>
-                    <button className="btn btn-outline-secondary w-100 mt-3" onClick={logInWithGoogle}><img src={githubIcon} alt="" /> Sign in with Github</button>
+                    <button className="btn btn-outline-secondary w-100 mt-3" onClick={logInWithGithub}><img src={githubIcon} alt="" /> Sign in with Github</button>
                 </Card.Body>
             </Card>
         </div>
