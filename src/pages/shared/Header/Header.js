@@ -7,7 +7,7 @@ import './Header.css';
 const Header = () => {
     const { user, logOut } = useAuth();
     return (
-        <Navbar className="header-container" collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar className="header-container" collapseOnSelect expand="lg" variant="light">
             <Container>
                 <Navbar.Brand as={Link} to="/home">
                     <img

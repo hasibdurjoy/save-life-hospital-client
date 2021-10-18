@@ -6,10 +6,11 @@ const BannerCarousel = ({ banner }) => {
             <div className="col-lg-6 col-md-6 col-4">
                 <img src={banner.img} alt="" />
             </div>
-            <div className="col-lg-6 col-md-6 col-6 d-flex align-items-center">
+            <div className="col-lg-6 col-md-6 col-6 d-flex align-items-center pe-5">
                 <div>
                     <h2>{banner.header}</h2>
-                    <p>Your Life is our priority</p>
+                    <p>{banner.description}</p>
+                    <button className="btn btn-danger rounded-pill">Book Now</button>
                 </div>
             </div>
         </div>
