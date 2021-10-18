@@ -9,7 +9,7 @@ const ServiceDetails = () => {
         fetch('https://raw.githubusercontent.com/hasibdurjoy/my-all-json-file/main/services.json')
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                setServices(data)
                 setService(data.find(serviceItem => serviceItem.id === serviceID))
             })
     }, []);
