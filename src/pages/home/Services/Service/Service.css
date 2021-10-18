@@ -1,0 +1,16 @@
+.service{
+    border-radius: 20px;
+}
+.service:hover{
+    transition: transform 1s;
+    transform: scale(1.03);
+}
+
+.service:hover img{
+    transition: transform 1s;
+    transform: scale(1.05);
+    border-radius: 20px;
+}
+.service img{
+    border-radius: 20px;
+}

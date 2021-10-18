@@ -27,7 +27,7 @@ function App() {
             <PrivateRoute path="/services/:serviceID"><ServiceDetails /></PrivateRoute>
             <Route path="*"><NotFound /></Route>
           </Switch>
-          {/* <Footer /> */}
+          <Footer />
         </Router>
       </AuthProvider>
     </div>
