@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import Ambulances from '../AmbulanceService/Ambulances/Ambulances';
 import Doctors from '../Doctors/Doctors';
+import Nurses from '../Nurses/Nurses/Nurses';
+import Operations from '../Operations/Operations/Operations';
 
 const ServiceDetails = () => {
     const { serviceID } = useParams();
@@ -15,13 +18,13 @@ const ServiceDetails = () => {
             })
     }, []);
     return (
-        <div>
-            <div className="px-5">
+        <div className="pt-5 banner-container">
+            <div className="px-3">
                 <div className="row">
-                    <div className="col-lg-6 col-md-6 col-4">
-                        <img src={service.img} alt="" height="400" />
+                    <div className="col-lg-6 col-md-6 col-12">
+                        <img src={service.img} alt="" className="img-fluid" />
                     </div>
-                    <div className="col-lg-6 col-md-6 col-6 d-flex align-items-center pe-5">
+                    <div className="col-lg-6 col-md-6 col-12 d-flex align-items-center pe-5">
                         <div>
                             <h2>{service.name}</h2>
                             <p>{service.description}</p>
@@ -34,7 +37,13 @@ const ServiceDetails = () => {
                 serviceID === 'service-1' && <Doctors></Doctors>
             }
             {
-                serviceID === 'service-6' && <Doctors></Doctors>
+                serviceID === 'service-5' && <Operations></Operations>
+            }
+            {
+                serviceID === 'service-6' && <Nurses></Nurses>
+            }
+            {
+                serviceID === 'service-7' && <Ambulances></Ambulances>
             }
         </div>
     );

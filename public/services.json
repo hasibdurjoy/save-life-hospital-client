@@ -2,43 +2,43 @@
     {
         "id": "service-1",
         "name": "Expert Doctors",
-        "description": "here in our hospital we have highly qualified doctors and nurses",
+        "description": "Medical specialists are experts in certain fields of medicine. They either treat specific parts of the body, such as the back or the brain, or they specialize in certain diseases, such as cancer. Family doctors keep a list of local specialists and can help patients choose the right specialist for each medical issue.",
         "img": "https://image.freepik.com/free-photo/happy-team-successful-doctors-standing-together-hospital-gowns_186202-1737.jpg"
     },
     {
         "id": "service-2",
         "name": "ICU service",
-        "description": "here in our hospital we have highly qualified doctors and nurses",
+        "description": "We defined ICU as a physical area inside a hospital where it is possible to provide advanced organ support to patients. Measures that can provide advanced organ support include mechanical ventilator (lung support), hemodialysis (renal support), and intra-aortic balloon pump (cardiac support).",
         "img": "https://images.theconversation.com/files/117015/original/image-20160331-28462-qliwnl.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip"
     },
     {
         "id": "service-3",
         "name": "Patient Bed",
-        "description": "here in our hospital we have highly qualified doctors and nurses",
+        "description": "We defined ICU as a physical area inside a hospital where it is possible to provide advanced organ support to patients. Measures that can provide advanced organ support include mechanical ventilator (lung support), hemodialysis (renal support), and intra-aortic balloon pump (cardiac support).",
         "img": "https://image.freepik.com/free-photo/hospital-room-with-bed-table_43614-220.jpg"
     },
     {
         "id": "service-4",
         "name": "Digital Pathology",
-        "description": "here in our hospital we have highly qualified doctors and nurses",
+        "description": "Digital pathology is a sub-field of pathology that focuses on data management based on information generated from digitized specimen slides. Through the use of computer-based technology, digital pathology utilizes virtual microscopy",
         "img": "https://image.freepik.com/free-photo/pneumonia-diagnosting-covid-19-coronavirus-identification-pandemic-mechanical-lungs-ventilation-machine_116317-4173.jpg"
     },
     {
         "id": "service-5",
         "name": "Digital OT",
-        "description": "here in our hospital we have highly qualified doctors and nurses",
+        "description": "The digital operating rooms will use the latest technology to connect medical equipment and health systems. This seamless integration will simplify processes, save time and ultimately create better patient outcomes. ... They even have the ability to live-stream medical procedures to students in a lecture theatre.",
         "img": "https://image.freepik.com/free-photo/surgeons-adjusting-oxygen-mask-patient-mouth-operation-theater_107420-64870.jpg"
     },
     {
         "id": "service-6",
         "name": "Private Nurse",
-        "description": "here in our hospital we have highly qualified doctors and nurses",
+        "description": "Private duty nursing is the care of clients by nurses, who may be licensed as RNs or LPNs/LVNs. In the late 19th and around the beginning of the 20th century, private duty nursing was seen as the ultimate goal of a trained nurse, both internationally and in Bangladesh",
         "img": "https://image.freepik.com/free-photo/healthcare-workers-prevent-virus-insurance-medicine-concept-supportive-professional-female-nurse-doctor-blue-scrubs-stethoscope-show-thumbs-up-approval-smiling_1258-57350.jpg"
     },
     {
         "id": "service-7",
         "name": "Ambulance service",
-        "description": "here in our hospital we have highly qualified doctors and nurses",
+        "description": "An ambulance is a medically equipped vehicle which transports patients to treatment facilities, such as hospitals. Typically, out-of-hospital medical care is provided to the patient. Ambulances are used to respond to medical emergencies by emergency medical services",
         "img": "https://image.freepik.com/free-vector/emergency-ambulance-with-coronavirus-concept_23-2148534627.jpg"
     }
 ]

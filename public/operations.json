@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "operationName": "Heart Operation",
+        "img": "https://images.unsplash.com/photo-1579684453423-f84349ef60b0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=891&q=80",
+        "cost": 30000
+    },
+    {
+        "id": 2,
+        "operationName": "Eye Operation",
+        "img": "https://www.cehjournal.org/wp-content/uploads/8489742428_3f62a14f9f_o.jpg",
+        "cost": 20000
+    },
+    {
+        "id": 3,
+        "operationName": "Gallbladder Stone",
+        "img": "https://images.medicinenet.com/images/article/main_image/what-type-of-surgeon-removes-gallbladder.jpg",
+        "cost": 40000
+    },
+    {
+        "id": 5,
+        "operationName": "Brain Tumor",
+        "img": "https://cdn.wionews.com/sites/default/files/styles/story_page/public/2020/02/20/129582-untitled-design-14.jpg",
+        "cost": 80000
+    },
+    {
+        "id": 6,
+        "operationName": "appendix operation",
+        "img": "https://cdn.yashodahospitals.com/wp-content/uploads/appendicitis-surgery-performed.jpg",
+        "cost": 20000
+    }
+]

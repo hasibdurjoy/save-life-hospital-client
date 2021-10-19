@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "Steven Queen",
+        "age": "22",
+        "img": "https://media.istockphoto.com/photos/portrait-of-female-nurse-using-tablet-at-hospital-picture-id1198224204?k=20&m=1198224204&s=612x612&w=0&h=y7KmFTJZ9JOya_1FQzst4oatxLux5Htr1QEmeVM396s=",
+        "price": 2000,
+        "experience": 3
+    },
+    {
+        "id": 2,
+        "name": "Neena Kochhar",
+        "age": "24",
+        "img": "https://www.purdueglobal.edu/blog/nursing/purgshouldyoubecomeanurse-image.jpg",
+        "price": 1000,
+        "experience": 1
+    },
+    {
+        "id": 3,
+        "name": "Bruce Ernst",
+        "age": "25",
+        "img": "https://miro.medium.com/max/1400/1*K6c131jPQ-zDgxhfS6dvvw.jpeg",
+        "price": 1500,
+        "experience": 2
+    },
+    {
+        "id": 4,
+        "name": "Luisn Popp",
+        "age": "20",
+        "img": "https://www.americantraveler.com/sites/default/files/field/image/nurse-grad-blog.jpg",
+        "price": 2500,
+        "experience": 5
+    },
+    {
+        "id": 5,
+        "name": "Karen Colmenares",
+        "age": "28",
+        "img": "https://www.thechicagoschool.edu/insightadmin/2020/05/GettyImages-1197650057-1-770x421.jpg",
+        "price": 2600,
+        "experience": 4
+    },
+    {
+        "id": 6,
+        "name": "Shanta Vollman",
+        "age": "25",
+        "img": "https://www.nursechoice.com/contentassets/b86928e07b3f4887a244ab616e54c920/contract-nursing-jobs-right-for-you.jpg?format=webp",
+        "price": 2000,
+        "experience": 3
+    }
+]

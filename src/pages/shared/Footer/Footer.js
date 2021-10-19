@@ -11,7 +11,7 @@ const Footer = () => {
         }
     }
     return (
-        <div className="bg-dark text-light px-5 pt-3">
+        <div className="bg-dark text-light px-5 pt-3 mt-5">
             <div className="row">
                 <div className="col-lg-3 col-md-3 col-6">
                     <img alt=""

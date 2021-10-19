@@ -12,7 +12,7 @@ const Services = () => {
     }, []);
     return (
         <Container className="mt-4">
-            <h2>Services</h2>
+            <h1 className="mb-3">Services</h1>
             <Row xs={1} md={3} className="g-4 rounded-lg">
 
                 {

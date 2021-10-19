@@ -12,6 +12,7 @@ import NotFound from './pages/shared/NotFound/NotFound';
 import ServiceDetails from './pages/home/Services/ServiceDetails/ServiceDetails';
 import PrivateRoute from './pages/authentication/PrivateRoute/PrivateRoute';
 import Doctors from './pages/home/Services/Doctors/Doctors';
+import Nurses from './pages/home/Services/Nurses/Nurses/Nurses';
 
 function App() {
   return (
@@ -25,7 +26,10 @@ function App() {
             <Route path="/login"><Login /></Route>
             <Route path="/register"><Register /></Route>
             <Route exact path="/services"><Services /></Route>
-            <PrivateRoute exact path="/doctors"><Doctors /></PrivateRoute>
+            <PrivateRoute  path="/doctors"><Doctors /></PrivateRoute>
+            <PrivateRoute  path="/pathology"><Doctors /></PrivateRoute>
+            <PrivateRoute  path="/ambulances"><Doctors /></PrivateRoute>
+            <PrivateRoute  path="/nurses"><Nurses /></PrivateRoute>
             <PrivateRoute path="/services/:serviceID"><ServiceDetails /></PrivateRoute>
             <Route path="*"><NotFound /></Route>
           </Switch>
