@@ -18,72 +18,83 @@ initializeAuthentication();
 
 const useFirebase = () => {
 
-    const [user, setUser] = useState();
-    const [error, setError] = useState();
-    
+    const [user, setUser] = useState({});
+    const [error, setError] = useState('');
+    const [isLoading, setIsLoading] = useState(true);
+
     const auth = getAuth();
 
-
-
-
-    const registerWithEmailPassword = (name, email, password, location, history) => {
+    const registerWithEmailPassword = (name, email, password, redirect_url, history) => {
         console.log(email, password);
         createUserWithEmailAndPassword(auth, email, password)
             .then((result) => {
                 updateProfile(auth.currentUser, { displayName: name })
-                    .then(result => { history.push(location.state?.from || "/login") })
+                    .then(result => { history.push(redirect_url) })
             })
+            .finally(() => { setIsLoading(false) })
             .catch((error) => {
                 setError(error.message);
             });
     }
 
-    const logInWithEmailPassword = (email, password, location, history) => {
+    const logInWithEmailPassword = (email, password, redirect_url, history) => {
         signInWithEmailAndPassword(auth, email, password)
             .then(result => {
                 const user = result.user;
-                history.push(location.state?.from || "/home");
+                history.push(redirect_url);
                 setError('')
             })
+            .finally(() => { setIsLoading(false) })
             .catch(error => {
                 setError(error.message);
             })
     }
 
-
-
-    const signInWithGoogle = () => {
+    const signInUsingGoogle = (redirect_url, history) => {
         const googleProvider = new GoogleAuthProvider();
-        return signInWithPopup(auth, googleProvider)
-    };
-
-    const signInWithGithub = () => {
-        const githubProvider = new GithubAuthProvider();
-        return signInWithPopup(auth, githubProvider);
-    };
-
-    //log out
-
-    const logOut = () => {
-        signOut(auth)
-            .then(() => {
-                setUser({});
+        signInWithPopup(auth, googleProvider)
+            .then(result => {
+                setUser(result.user)
+                history.push(redirect_url);
             })
+            .finally(() => { setIsLoading(false) })
     }
-    //observing state change or not
+
+    const signInUsingGithub = (redirect_url, history) => {
+        const githubProvider = new GithubAuthProvider();
+        signInWithPopup(auth, githubProvider)
+            .then(result => {
+                setUser(result.user)
+                history.push(redirect_url);
+            })
+            .finally(() => { setIsLoading(false) })
+    }
+
+
     useEffect(() => {
-        onAuthStateChanged(auth, (user) => {
+        const unsubscribed = onAuthStateChanged(auth, (user) => {
             if (user) {
-                setUser(user);
+                setUser(user)
             }
-        });
+            else {
+                setUser({})
+            }
+            setIsLoading(false);
+        })
+        return () => unsubscribed;
     }, []);
-
-
+    const logOut = () => {
+        setIsLoading(true);
+        signOut(auth)
+            .then(() => { })
+            .finally(() => { setIsLoading(false) })
+    }
     return {
         user,
-        signInWithGoogle,
-        signInWithGithub,
+        isLoading,
+        setUser,
+        signInUsingGoogle,
+        signInUsingGithub,
         registerWithEmailPassword,
         logInWithEmailPassword,
         logOut

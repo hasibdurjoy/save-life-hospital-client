@@ -16,19 +16,17 @@ const Login = () => {
     const location = useLocation();
     const redirect_url = location.state?.from || "/home";
 
-    const { signInWithGoogle, signInWithGithub, logInWithEmailPassword } = useAuth();
+    const { signInUsingGoogle, signInUsingGithub, logInWithEmailPassword } = useAuth();
 
     const logInWithGoogle = () => {
-        signInWithGoogle()
-            .then(result => {
-                history.push(redirect_url);
-            })
+        signInUsingGoogle(redirect_url, history)
+        /* .then(result => {
+            history.push(redirect_url);
+        }) */
     }
     const logInWithGithub = () => {
-        signInWithGithub()
-            .then(result => {
-                history.push(redirect_url);
-            })
+        signInUsingGithub(redirect_url, history)
+
     }
 
 
@@ -42,10 +40,7 @@ const Login = () => {
 
     const signInWithEmailPassword = (e) => {
         e.preventDefault();
-        logInWithEmailPassword(email, password, location, history)
-        /* .then(result => {
-            history.push(redirect_url);
-        }) */
+        logInWithEmailPassword(email, password, redirect_url, history)
     }
     return (
         <div className="d-flex flex-column align-items-center justify-content-center py-2 log-in">
