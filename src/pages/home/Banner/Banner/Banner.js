@@ -10,8 +10,7 @@ const Banner = () => {
                 </div>
                 <div className="col-lg-4 col-md-4 col-12 d-flex align-items-center pe-5 text-start">
                     <div>
-                        <h2>Save Life Hospital</h2>
-                        <p className="text-danger">Your Life Is Our Priority</p>
+                        <p className="text-danger banner-title">Your Life Is Our Priority</p>
                         <h4>Ready To give you service</h4>
                         <h2 className="text-danger">Emergency ?</h2>
                         <button className="btn btn-danger rounded-pill">Call : 99999999888</button>
