@@ -17,7 +17,10 @@ const Login = () => {
     const redirect_url = location.state?.from || "/home";
 
     const { signInUsingGoogle, signInUsingGithub, logInWithEmailPassword } = useAuth();
-
+    let { error } = useAuth();
+    if (error) {
+        error = 'incorrect username or password try again'
+    }
     const logInWithGoogle = () => {
         signInUsingGoogle(redirect_url, history)
         /* .then(result => {
@@ -57,9 +60,11 @@ const Login = () => {
                         <h4>Save Life Hospital</h4>
                     </div>
                     <form className="w-100">
-                        <input onBlur={takeEmail} className="mt-2 p-2 rounded border-1 w-100" type="email" name=""  placeholder="email" required /><br />
-                        <input onBlur={takePassword} className="mt-4 mb-2 p-2 rounded border-1 w-100" type="password" name=""  placeholder="password" required id="user-password"/><br />
-                        <input onClick={signInWithEmailPassword} className="mt-4 p-2 rounded border-1 w-100 btn btn-danger" type="submit" value="Sign In" />
+                        <input onBlur={takeEmail} className="mt-2 p-2 rounded border-1 w-100" type="email" name="" placeholder="email" required /><br />
+                        <input onBlur={takePassword} className="mt-4 mb-2 p-2 rounded border-1 w-100" type="password" name="" placeholder="password" required id="user-password" />
+                        <div className="text-danger text-start">{error}</div>
+                        <br />
+                        <input onClick={signInWithEmailPassword} className="mt-2 p-2 rounded border-1 w-100 btn btn-danger" type="submit" value="Sign In" />
                     </form>
                     <p className="mt-4">
                         <Link to="/register" className="text-danger">don't have an account? sign up now</Link>
