@@ -1,6 +1,5 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 
 const Doctor = ({ doctor }) => {
     const { id, name, description, img } = doctor;
@@ -10,15 +9,12 @@ const Doctor = ({ doctor }) => {
                 <Card.Img variant="top" src={img} className="p-2 rounded-lg card-img-top" height="250px" />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
-                    <Card.Text>
-                        This is a longer card with supporting text below as a natural
-                        lead-in to additional content. This content is a little bit longer.
+                    <Card.Text className="text-start">
+                        {description}
                     </Card.Text>
                 </Card.Body>
                 <Card.Footer>
-                    <Link to={`/doctors/${id}`}>
-                        <button className="btn btn-primary w-100 rounded">See Details</button>
-                    </Link>
+                    <button className="btn btn-primary w-100 rounded mb-2">For Details Call: +99999988</button>
                 </Card.Footer>
             </Card>
         </Col>

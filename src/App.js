@@ -11,8 +11,8 @@ import Services from './pages/home/Services/Services/Services';
 import NotFound from './pages/shared/NotFound/NotFound';
 import ServiceDetails from './pages/home/Services/ServiceDetails/ServiceDetails';
 import PrivateRoute from './pages/authentication/PrivateRoute/PrivateRoute';
-import Doctors from './pages/home/Services/Doctors/Doctors';
 import Nurses from './pages/home/Services/Nurses/Nurses/Nurses';
+import Doctors from './pages/home/Services/Doctors/Doctors/Doctors';
 
 function App() {
   return (
@@ -26,10 +26,10 @@ function App() {
             <Route path="/login"><Login /></Route>
             <Route path="/register"><Register /></Route>
             <Route exact path="/services"><Services /></Route>
-            <PrivateRoute  path="/doctors"><Doctors /></PrivateRoute>
-            <PrivateRoute  path="/pathology"><Doctors /></PrivateRoute>
-            <PrivateRoute  path="/ambulances"><Doctors /></PrivateRoute>
-            <PrivateRoute  path="/nurses"><Nurses /></PrivateRoute>
+            <PrivateRoute path="/doctors"><Doctors /></PrivateRoute>
+            <PrivateRoute path="/pathology"><Doctors /></PrivateRoute>
+            <PrivateRoute path="/ambulances"><Doctors /></PrivateRoute>
+            <PrivateRoute path="/nurses"><Nurses /></PrivateRoute>
             <PrivateRoute path="/services/:serviceID"><ServiceDetails /></PrivateRoute>
             <Route path="*"><NotFound /></Route>
           </Switch>

@@ -3,40 +3,40 @@
         "id": "doctor-1",
         "name": "Dr. Rozanee Kanta Das",
         "degree": "MBBS,FCPS,PHD,BCS",
-        "description": "He is a very good doctor",
+        "description": "Expert in medicine and gastrology",
         "img": "https://image.freepik.com/free-photo/portrait-smiling-male-doctor_171337-1532.jpg"
     },
     {
-        "id": "doctor-1",
-        "name": "Dr. Rozanee Kanta Das",
-        "degree": "MBBS,FCPS,PHD,BCS",
-        "description": "He is a very good doctor",
+        "id": "doctor-2",
+        "name": "Dr. Toufiq Ahmed Pranto",
+        "degree": "MBBS,FCPS,PHD,FRCS",
+        "description": "Expert in heart and urology",
         "img": "https://image.freepik.com/free-photo/portrait-smiling-handsome-male-doctor-man_171337-5055.jpg"
     },
     {
-        "id": "doctor-1",
-        "name": "Dr. Rozanee Kanta Das",
-        "degree": "MBBS,FCPS,PHD,BCS",
-        "description": "He is a very good doctor",
+        "id": "doctor-3",
+        "name": "Dr. Fazle Rabbi Talukder",
+        "degree": "MBBS,FCPS,FRCS,BCS",
+        "description": "Expertr In Surgery",
         "img": "https://image.freepik.com/free-photo/doctor-with-co-workers-analyzing-x-ray_1098-581.jpg"
     },
     {
-        "id": "doctor-1",
-        "name": "Dr. Rozanee Kanta Das",
-        "degree": "MBBS,FCPS,PHD,BCS",
-        "description": "He is a very good doctor",
+        "id": "doctor-4",
+        "name": "Dr. Morina haque",
+        "degree": "MBBS,FCPS,PHD",
+        "description": "Expert in kidney",
         "img": "https://image.freepik.com/free-photo/group-successful-doctors-hospital_85574-5175.jpg"
     },
     {
-        "id": "doctor-1",
-        "name": "Dr. Rozanee Kanta Das",
+        "id": "doctor-5",
+        "name": "Dr. Rozina Khatun",
         "degree": "MBBS,FCPS,PHD,BCS",
-        "description": "He is a very good doctor",
+        "description": "Expert in women problems",
         "img": "https://image.freepik.com/free-photo/pleased-young-female-doctor-wearing-medical-robe-stethoscope-around-neck-standing-with-closed-posture_409827-254.jpg"
     },
     {
-        "id": "doctor-1",
-        "name": "Dr. Rozanee Kanta Das",
+        "id": "doctor-6",
+        "name": "Dr. Towfiqul Islam",
         "degree": "MBBS,FCPS,PHD,BCS",
         "description": "He is a very good doctor",
         "img": "https://image.freepik.com/free-photo/hospital-healthcare-workers-covid-19-treatment-concept-young-doctor-scrubs-making-daily-errands-clinic-listening-patient-symptoms-look-camera-professional-physician-curing-diseases_1258-57233.jpg"
