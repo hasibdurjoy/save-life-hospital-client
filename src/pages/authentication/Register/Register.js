@@ -17,6 +17,7 @@ const Register = () => {
 
     const [name, setName] = useState();
     const [email, setEmail] = useState();
+    const [error, setError] = useState();
     const [password, setPassword] = useState();
     // const history = useHistory();
 
@@ -47,7 +48,22 @@ const Register = () => {
 
     const newAccountWithEmailPassword = (e) => {
         e.preventDefault();
-        registerWithEmailPassword(name, email, password, redirect_url, history);
+        if (!name) {
+            setError('enter your name');
+            return;
+        }
+        if (!email) {
+            setError('enter your email');
+            return;
+        }
+        if (password.length < 6) {
+            setError('Password must be atleast 6 character');
+            return;
+        }
+        else {
+            registerWithEmailPassword(name, email, password, redirect_url, history);
+
+        }
         // history.push('/login');
     }
 
@@ -66,8 +82,10 @@ const Register = () => {
                     <form className="w-100">
                         <input onBlur={takeName} className="mt-2 p-2 rounded border-1 w-100" type="text" name="" placeholder="name" required /><br />
                         <input onBlur={takeEmail} className="mt-3 p-2 rounded border-1 w-100" type="email" name="" placeholder="email" required /><br />
-                        <input onBlur={takePassword} className="mt-3 p-2 rounded border-1 w-100" type="password" name="" placeholder="password" required /><br />
-                        <input onClick={newAccountWithEmailPassword} className="mt-4 p-2 rounded border-1 w-100 btn btn-danger" type="submit" value="Sign up" />
+                        <input onBlur={takePassword} className="mt-3 p-2 rounded border-1 w-100" type="password" name="" placeholder="password" required />
+                        <div className="text-danger text-start pt-2">{error}</div>
+                        <br />
+                        <input onClick={newAccountWithEmailPassword} className="mt-2 p-2 rounded border-1 w-100 btn btn-danger" type="submit" value="Sign up" />
                     </form>
                     <p className="mt-4">
                         <Link to="/login" className="text-danger">already have an account? sign in now</Link>
