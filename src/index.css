@@ -2,8 +2,7 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: rgb(194,190,190);
-  background: linear-gradient(180deg, rgba(194,190,190,0.4206057422969187) 0%, rgba(179,222,232,0.5466561624649859) 0%, rgba(255,255,255,1) 67%);
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -13,7 +12,6 @@ code {
     monospace;
 }
 
-.color-container{
-  background: rgb(194,190,190);
-background: linear-gradient(180deg, rgba(194,190,190,0.4206057422969187) 0%, rgba(179,222,232,0.5466561624649859) 0%, rgba(255,255,255,1) 67%);
+.card-color{
+  background: linear-gradient(180deg, hsla(0, 0%, 100%, 1) 0%, hsla(198, 100%, 80%, 0.4) 100%);
 }

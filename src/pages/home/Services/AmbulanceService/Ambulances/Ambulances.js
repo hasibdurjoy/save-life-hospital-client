@@ -4,7 +4,7 @@ import Ambulance from '../Ambulance/Ambulance';
 const Ambulances = () => {
     const [ambulances, setAmbulances] = useState([]);
     useEffect(() => {
-        fetch("https://raw.githubusercontent.com/hasibdurjoy/my-all-json-file/main/ambulences.json#")
+        fetch("https://raw.githubusercontent.com/hasibdurjoy/my-all-json-file/main/ambulences.json")
             .then(res => res.json())
             .then(data => setAmbulances(data))
     }, [])
