@@ -20,25 +20,29 @@ const useFirebase = () => {
 
     const [user, setUser] = useState();
     const [error, setError] = useState();
+    
     const auth = getAuth();
 
 
-    const registerWithEmailPassword = (name, email, password) => {
+
+
+    const registerWithEmailPassword = (name, email, password, location, history) => {
         console.log(email, password);
         createUserWithEmailAndPassword(auth, email, password)
             .then((result) => {
                 updateProfile(auth.currentUser, { displayName: name })
-                    .then(result => { })
+                    .then(result => { history.push(location.state?.from || "/login") })
             })
             .catch((error) => {
                 setError(error.message);
             });
     }
 
-    const logInWithEmailPassword = (email, password) => {
+    const logInWithEmailPassword = (email, password, location, history) => {
         signInWithEmailAndPassword(auth, email, password)
             .then(result => {
                 const user = result.user;
+                history.push(location.state?.from || "/home");
                 setError('')
             })
             .catch(error => {

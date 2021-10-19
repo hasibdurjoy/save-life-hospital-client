@@ -42,7 +42,7 @@ const Login = () => {
 
     const signInWithEmailPassword = (e) => {
         e.preventDefault();
-        logInWithEmailPassword(email, password)
+        logInWithEmailPassword(email, password, location, history)
         /* .then(result => {
             history.push(redirect_url);
         }) */

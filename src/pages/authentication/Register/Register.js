@@ -47,7 +47,7 @@ const Register = () => {
 
     const newAccountWithEmailPassword = (e) => {
         e.preventDefault();
-        registerWithEmailPassword(name, email, password);
+        registerWithEmailPassword(name, email, password, location, history);
         // history.push('/login');
     }
 
