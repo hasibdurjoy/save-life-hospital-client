@@ -1,11 +1,16 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import './Header.css';
 
 const Header = () => {
     const { user, logOut } = useAuth();
+
+    const navStyle = {
+        fontWeight: "bold",
+        color: "red"
+    }
     return (
         <Navbar className="header-container" collapseOnSelect expand="lg" variant="light">
             <Container>
@@ -24,12 +29,12 @@ const Header = () => {
                     <Nav className="me-auto">
                     </Nav>
                     <Nav className="me-auto">
-                        <Nav.Link as={Link} to="/home">Home</Nav.Link>
-                        <Nav.Link as={Link} to="/services">Services</Nav.Link>
-                        <Nav.Link as={Link} to="/doctors">Doctors</Nav.Link>
-                        <Nav.Link as={Link} to="/pathology">Pathology</Nav.Link>
-                        <Nav.Link as={Link} to="/ambulances">Ambulances</Nav.Link>
-                        <Nav.Link as={Link} to="/nurses">Nurses</Nav.Link>
+                        <NavLink to="/home" activeStyle={navStyle}>Home</NavLink>
+                        <NavLink to="/services" activeStyle={navStyle}>Services</NavLink>
+                        <NavLink to="/doctors" activeStyle={navStyle}>Doctors</NavLink>
+                        <NavLink to="/pathology" activeStyle={navStyle}>Pathology</NavLink>
+                        <NavLink to="/ambulances" activeStyle={navStyle}>Ambulances</NavLink>
+                        <NavLink to="/nurses" activeStyle={navStyle}>Nurses</NavLink>
                     </Nav>
                     <Nav>
 
