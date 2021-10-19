@@ -10,7 +10,7 @@ const Ambulance = ({ambulance}) => {
                     <Card.Body>
                         <Card.Title>{name}</Card.Title>
                         <Card.Text>
-                            <h4>Type : {type} BDT</h4>
+                            <p>Type : {type} BDT</p>
                             <h4>Cost : {cost} BDT</h4>
                         </Card.Text>
                     </Card.Body>

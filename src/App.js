@@ -13,6 +13,8 @@ import ServiceDetails from './pages/home/Services/ServiceDetails/ServiceDetails'
 import PrivateRoute from './pages/authentication/PrivateRoute/PrivateRoute';
 import Nurses from './pages/home/Services/Nurses/Nurses/Nurses';
 import Doctors from './pages/home/Services/Doctors/Doctors/Doctors';
+import Pathologies from './pages/home/Services/Pathologies/Pathologies/Pathologies';
+import Ambulances from './pages/home/Services/AmbulanceService/Ambulances/Ambulances';
 
 function App() {
   return (
@@ -27,8 +29,8 @@ function App() {
             <Route path="/register"><Register /></Route>
             <Route exact path="/services"><Services /></Route>
             <PrivateRoute path="/doctors"><Doctors /></PrivateRoute>
-            <PrivateRoute path="/pathology"><Doctors /></PrivateRoute>
-            <PrivateRoute path="/ambulances"><Doctors /></PrivateRoute>
+            <PrivateRoute path="/pathology"><Pathologies /></PrivateRoute>
+            <PrivateRoute path="/ambulances"><Ambulances /></PrivateRoute>
             <PrivateRoute path="/nurses"><Nurses /></PrivateRoute>
             <PrivateRoute path="/services/:serviceID"><ServiceDetails /></PrivateRoute>
             <Route path="*"><NotFound /></Route>
