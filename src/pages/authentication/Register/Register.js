@@ -64,13 +64,13 @@ const Register = () => {
                     />
                     <h4>Save Life Hospital</h4>
                     <form className="w-100">
-                        <input onBlur={takeName} className="mt-2 p-2 rounded border-1 w-100" type="text" name="" id="" placeholder="name" required /><br />
-                        <input onBlur={takeEmail} className="mt-3 p-2 rounded border-1 w-100" type="email" name="" id="" placeholder="email" required /><br />
-                        <input onBlur={takePassword} className="mt-3 p-2 rounded border-1 w-100" type="password" name="" id="" placeholder="password" required /><br />
+                        <input onBlur={takeName} className="mt-2 p-2 rounded border-1 w-100" type="text" name="" placeholder="name" required /><br />
+                        <input onBlur={takeEmail} className="mt-3 p-2 rounded border-1 w-100" type="email" name="" placeholder="email" required /><br />
+                        <input onBlur={takePassword} className="mt-3 p-2 rounded border-1 w-100" type="password" name="" placeholder="password" required /><br />
                         <input onClick={newAccountWithEmailPassword} className="mt-4 p-2 rounded border-1 w-100 btn btn-danger" type="submit" value="Sign up" />
                     </form>
                     <p className="mt-4">
-                        <Link to="/register" className="text-danger">already have an account? sign in now</Link>
+                        <Link to="/login" className="text-danger">already have an account? sign in now</Link>
                     </p>
                     <hr />
                     <p>OR</p>

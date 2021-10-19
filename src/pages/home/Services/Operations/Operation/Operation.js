@@ -1,9 +1,8 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 
 const Operation = ({ operation }) => {
-    const { id, operationName, img, cost } = operation;
+    const { operationName, img, cost } = operation;
 
     return (
         <div>

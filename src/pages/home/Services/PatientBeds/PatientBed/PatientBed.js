@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, Col } from 'react-bootstrap';
 
 const PatientBed = ({bed}) => {
-    const { id, name, cost, img } = bed;
+    const { name, cost, img } = bed;
     return (
         <Col>
             <Card className="shadow-lg h-100 service">

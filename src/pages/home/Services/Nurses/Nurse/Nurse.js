@@ -1,9 +1,8 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 
 const Nurse = ({ nurse }) => {
-    const { id, name, img, age, price, experience } = nurse;
+    const { name, img, age, price, experience } = nurse;
     return (
         <Col>
             <Card className="shadow-lg h-100 service">

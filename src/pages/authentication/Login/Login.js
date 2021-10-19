@@ -57,8 +57,8 @@ const Login = () => {
                         <h4>Save Life Hospital</h4>
                     </div>
                     <form className="w-100">
-                        <input onBlur={takeEmail} className="mt-2 p-2 rounded border-1 w-100" type="email" name="" id="" placeholder="email" required /><br />
-                        <input onBlur={takePassword} className="mt-4 mb-2 p-2 rounded border-1 w-100" type="password" name="" id="" placeholder="password" required /><br />
+                        <input onBlur={takeEmail} className="mt-2 p-2 rounded border-1 w-100" type="email" name=""  placeholder="email" required /><br />
+                        <input onBlur={takePassword} className="mt-4 mb-2 p-2 rounded border-1 w-100" type="password" name=""  placeholder="password" required id="user-password"/><br />
                         <input onClick={signInWithEmailPassword} className="mt-4 p-2 rounded border-1 w-100 btn btn-danger" type="submit" value="Sign In" />
                     </form>
                     <p className="mt-4">

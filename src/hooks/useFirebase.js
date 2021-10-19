@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import initializeAuthentication from '../firebase/firebase.init';
 import {
     onAuthStateChanged,
@@ -29,7 +29,10 @@ const useFirebase = () => {
         createUserWithEmailAndPassword(auth, email, password)
             .then((result) => {
                 updateProfile(auth.currentUser, { displayName: name })
-                    .then(result => { history.push(redirect_url) })
+                    .then(() => {
+                        history.push(redirect_url);
+                        window.location.reload();
+                    })
             })
             .finally(() => { setIsLoading(false) })
             .catch((error) => {
