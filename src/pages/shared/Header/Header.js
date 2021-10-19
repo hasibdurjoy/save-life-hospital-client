@@ -35,8 +35,8 @@ const Header = () => {
 
                         {
                             user?.email ? <>
-                                <Nav.Link className="btn btn-light rounded-pill mx-3 text-dark">{user.displayName}</Nav.Link>
-                                <Nav.Link onClick={logOut} as={Link} to="/" className="btn btn-danger rounded-pill text-light">Logout</Nav.Link>
+                                <Nav.Link className="btn btn-light rounded-pill mx-3 px-3 text-dark">{user.displayName}</Nav.Link>
+                                <Nav.Link onClick={logOut} as={Link} to="/" className="btn btn-danger rounded-pill text-light px-3">Logout</Nav.Link>
                             </>
                                 : <>
                                     <Nav.Link as={Link} to="/login" className="btn btn-danger px-4 rounded-pill text-light">Login</Nav.Link>
