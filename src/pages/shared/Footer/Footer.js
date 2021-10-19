@@ -13,7 +13,7 @@ const Footer = () => {
     return (
         <div className="bg-dark text-light px-5 pt-3 mt-5">
             <div className="row">
-                <div className="col-lg-3 col-md-3 col-6">
+                <div className="col-lg-3 col-md-3  mb-sm-3">
                     <img alt=""
                         src="https://seeklogo.com/images/H/hospital-clinic-plus-logo-7916383C7A-seeklogo.com.png"
                         width="80"
@@ -28,7 +28,7 @@ const Footer = () => {
                         <i className="fab fa-twitter fs-4 p-3"></i>
                     </div>
                 </div>
-                <div className="col-lg-3 col-md-3 col-6 text-start">
+                <div className="col-lg-3 col-md-3   text-start mb-sm-3">
                     <p className="text-secondary">Support</p>
                     <p>Contact Us</p>
                     <p><i className="fas fa-phone"></i> Phone : +99999999888</p>
@@ -36,7 +36,7 @@ const Footer = () => {
                     <p><i className="fas fa-location-arrow"></i> Azimpur rd-1 house-87</p>
                     <p><i className="fab fa-whatsapp"></i> +0099887766</p>
                 </div>
-                <div className="col-lg-3 col-md-3 col-6 text-start">
+                <div className="col-lg-3 col-md-3   text-start mb-sm-3">
                     <p className="text-secondary">Contact Other Branches</p>
                     <p>Dhanmondi : +99999999888</p>
                     <p>Uttara : +99999999877</p>
@@ -44,7 +44,7 @@ const Footer = () => {
                     <p>Lalbagh : +99999999855</p>
                     <p>Chittagong : +99999999844</p>
                 </div>
-                <div className="col-lg-3 col-md-3 col-6">
+                <div className="col-lg-3 col-md-3  ">
                     <p><i className="fas fa-envelope"></i> Stay up to date</p>
                     <input type="email" name="" id="" className="bg-dark text-light border-0 p-3" placeholder="Enter your e-mail address" />
                     <div className="text-center mt-3">

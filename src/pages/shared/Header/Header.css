@@ -4,6 +4,6 @@ background-color: rgba(166, 250, 222, 0.308);
 .header-container a{
     text-decoration: none;
     font-size: bold;
-    padding-left: 10px;
+    margin-left: 12px;
     color: black;
 }
