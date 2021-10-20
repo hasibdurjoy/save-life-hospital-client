@@ -6,32 +6,31 @@ import useAuth from '../../../hooks/useAuth';
 import './Register.css';
 import googleIcon from '../../../images/icons/google.png';
 import githubIcon from '../../../images/icons/github.png';
+import { useForm } from 'react-hook-form';
 
 const Register = () => {
     const { signInUsingGoogle, signInUsingGithub, registerWithEmailPassword } = useAuth();
+    const { register, handleSubmit, formState: { errors } } = useForm();
+
 
     const history = useHistory();
     const location = useLocation();
     const redirect_url = location.state?.from || "/home";
-
-
-    const [name, setName] = useState();
-    const [email, setEmail] = useState();
     const [error, setError] = useState();
-    const [password, setPassword] = useState();
-    // const history = useHistory();
 
-    const takeName = (e) => {
-        setName(e.target.value);
-    }
-    const takeEmail = (e) => {
-        setEmail(e.target.value);
-    }
-
-    const takePassword = (e) => {
-        setPassword(e.target.value);
-    }
-
+    const onSubmit = data => {
+        if ((data.password).length < 6) {
+            setError('** password must be at least 6 characters');
+            return;
+        }
+        if (data.password!==data.confirmPassword) {
+            setError('** please match both password');
+            return;
+        }
+        else {
+            registerWithEmailPassword(data.name, data.email, data.password, redirect_url, history);
+        }
+    };
 
     const logInWithGoogle = () => {
         signInUsingGoogle(redirect_url, history);
@@ -40,33 +39,8 @@ const Register = () => {
         signInUsingGithub(redirect_url, history);
     }
 
-    const newAccountWithEmailPassword = (e) => {
-        e.preventDefault();
-        if (!name) {
-            setError('enter your name');
-            return;
-        }
-        if (!email) {
-            setError('enter your email');
-            return;
-        }
-        if (!password) {
-            setError('enter your password');
-            return;
-        }
-        if (password.length < 6) {
-            setError('Password must be atleast 6 character');
-            return;
-        }
-        else {
-            registerWithEmailPassword(name, email, password, redirect_url, history);
-
-        }
-        // history.push('/login');
-    }
-
     return (
-        <div className="d-flex flex-column align-items-center justify-content-center py-2 register">
+        <div className="d-flex flex-column align-items-center justify-content-center py-2 pb-5 register">
             <Card className="border-0 shadow px-2 rounded">
                 <Card.Body>
                     <img
@@ -77,13 +51,23 @@ const Register = () => {
                         className="d-inline-block align-top"
                     />
                     <h4>Save Life Hospital</h4>
-                    <form className="w-100">
-                        <input onBlur={takeName} className="mt-2 p-2 rounded border-1 w-100" type="text" name="" placeholder="name" required /><br />
-                        <input onBlur={takeEmail} className="mt-3 p-2 rounded border-1 w-100" type="email" name="" placeholder="email" required /><br />
-                        <input onBlur={takePassword} className="mt-3 p-2 rounded border-1 w-100" type="password" name="" placeholder="password" required />
-                        <div className="text-danger text-start pt-2">{error}</div>
-                        <br />
-                        <input onClick={newAccountWithEmailPassword} className="mt-2 p-2 rounded border-1 w-100 btn btn-danger" type="submit" value="Sign up" />
+                    <form onSubmit={handleSubmit(onSubmit)} className="text-start">
+                        <input  {...register("name", { required: true })} type="text" className="mt-2 p-2 rounded border-1 w-100" placeholder="enter your name " /> <br />
+                        {errors.name && <>  <span className="text-danger text-start">** Name is required</span></>}
+
+                        <input  {...register("email", { required: true })} type="email" className="mt-3 p-2 rounded border-1 w-100" placeholder="email address" /> <br />
+                        {errors.email && <>  <span className="text-danger text-start">** Enter your email address</span></>}
+
+
+                        <input  {...register("password", { required: true })} type="password" className="mt-3 p-2 rounded border-1 w-100" placeholder="password *" /> <br />
+                        {errors.password && <>  <span className="text-danger text-start">** Please enter a password</span></>}
+                        <div className="text-danger text-start">{error}</div>
+
+                        <input  {...register("confirmPassword", { required: true })} type="password" className="mt-3 p-2 rounded border-1 w-100" placeholder="Confirm password *" /> <br />
+                        {errors.confirmPassword && <>  <span className="text-danger text-start">** Please renter password</span></>}
+                        <div className="text-danger text-start">{error}</div>
+
+                        <input type="submit" value="Sign up" className="mt-2 p-2 rounded border-1 w-100 btn btn-danger" />
                     </form>
                     <p className="mt-4">
                         <Link to="/login" className="text-danger">already have an account? sign in now</Link>
