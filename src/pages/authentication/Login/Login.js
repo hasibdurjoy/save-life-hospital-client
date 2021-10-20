@@ -22,14 +22,10 @@ const Login = () => {
         error = 'incorrect username or password try again'
     }
     const logInWithGoogle = () => {
-        signInUsingGoogle(redirect_url, history)
-        /* .then(result => {
-            history.push(redirect_url);
-        }) */
+        signInUsingGoogle(redirect_url, history);
     }
     const logInWithGithub = () => {
-        signInUsingGithub(redirect_url, history)
-
+        signInUsingGithub(redirect_url, history);
     }
 
 

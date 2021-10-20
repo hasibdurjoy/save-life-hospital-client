@@ -8,7 +8,7 @@ import googleIcon from '../../../images/icons/google.png';
 import githubIcon from '../../../images/icons/github.png';
 
 const Register = () => {
-    const { signInWithGoogle, signInWithGithub, registerWithEmailPassword } = useAuth();
+    const { signInUsingGoogle, signInUsingGithub, registerWithEmailPassword } = useAuth();
 
     const history = useHistory();
     const location = useLocation();
@@ -34,16 +34,10 @@ const Register = () => {
 
 
     const logInWithGoogle = () => {
-        signInWithGoogle()
-            .then(result => {
-                history.push(redirect_url);
-            })
+        signInUsingGoogle(redirect_url, history);
     }
     const logInWithGithub = () => {
-        signInWithGithub()
-            .then(result => {
-                history.push(redirect_url);
-            })
+        signInUsingGithub(redirect_url, history);
     }
 
     const newAccountWithEmailPassword = (e) => {
