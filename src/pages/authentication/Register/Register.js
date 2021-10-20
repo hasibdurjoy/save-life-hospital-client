@@ -56,7 +56,7 @@ const Register = () => {
                         {errors.name && <small className="text-danger text-start">Enter your name</small>}
 
                         <input  {...register("email", { required: true })} type="email" className="mt-3 p-2 rounded border-1 w-100" placeholder="email address" /> <br />
-                        {errors.email &&  <small className="text-danger text-start">** Enter your email</small>}
+                        {errors.email &&  <small className="text-danger text-start">Enter your email</small>}
 
 
                         <input  {...register("password", { required: true })} type="password" className="mt-3 p-2 rounded border-1 w-100" placeholder="password *" /> <br />
