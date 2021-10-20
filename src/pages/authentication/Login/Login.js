@@ -28,7 +28,7 @@ const Login = () => {
     if (error) {
         error = 'incorrect username or password try again'
     }
-    
+
     const logInWithGoogle = () => {
         signInUsingGoogle(redirect_url, history);
     }
@@ -37,7 +37,7 @@ const Login = () => {
     }
 
     return (
-        <div className="d-flex flex-column align-items-center justify-content-center py-2 log-in">
+        <div className="d-flex flex-column align-items-center justify-content-center  p-5 log-in">
             <Card className="border-0 shadow px-2 rounded">
                 <Card.Body>
                     <div>
@@ -52,12 +52,13 @@ const Login = () => {
                     </div>
                     <form onSubmit={handleSubmit(onSubmit)} className="text-start">
                         <input  {...register("email", { required: true })} type="email" className="mt-3 p-2 rounded border-1 w-100" placeholder="email address" /> <br />
-                        {errors.email && <>  <span className="text-danger text-start">** Enter your email address</span></>}
+                        {errors.email &&  <small className="text-danger text-start">** Enter your email address</small>}
 
 
                         <input  {...register("password", { required: true })} type="password" className="mt-3 p-2 rounded border-1 w-100" placeholder="password *" /> <br />
-                        {errors.password && <>  <span className="text-danger text-start">** Please enter a password</span></>}
-                        <div className="text-danger text-start">{error}</div>
+                        {errors.password && <small className="text-danger text-start">** Please enter a password</small>}
+                        {errors.password && <br/>}
+                        <small className="text-danger text-start">{error}</small>
 
                         <input type="submit" value="Log in" className="mt-2 p-2 rounded border-1 w-100 btn btn-danger" />
                     </form>
