@@ -20,9 +20,9 @@ const Login = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = data => {
-        
+
         logInWithEmailPassword(data.email, data.password, redirect_url, history);
-        
+
     };
 
     if (error) {
@@ -52,12 +52,12 @@ const Login = () => {
                     </div>
                     <form onSubmit={handleSubmit(onSubmit)} className="text-start">
                         <input  {...register("email", { required: true })} type="email" className="mt-3 p-2 rounded border-1 w-100" placeholder="email address" /> <br />
-                        {errors.email &&  <small className="text-danger text-start">** Enter your email address</small>}
+                        {errors.email && <small className="text-danger text-start">Enter email</small>}
 
 
                         <input  {...register("password", { required: true })} type="password" className="mt-3 p-2 rounded border-1 w-100" placeholder="password *" /> <br />
-                        {errors.password && <small className="text-danger text-start">** Please enter a password</small>}
-                        {errors.password && <br/>}
+                        {errors.password && <small className="text-danger text-start">enter  password</small>}
+                        {errors.password && <br />}
                         <small className="text-danger text-start">{error}</small>
 
                         <input type="submit" value="Log in" className="mt-2 p-2 rounded border-1 w-100 btn btn-danger" />

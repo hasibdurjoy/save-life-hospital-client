@@ -10,7 +10,7 @@ const PatientBeds = () => {
             .then(data => setBeds(data))
     }, []);
     return (
-        <Container className="mt-4">
+        <Container className="my-4">
             <h1 className="mb-3">Beds</h1>
             <Row xs={1} md={3} className="g-4 rounded-lg">
 

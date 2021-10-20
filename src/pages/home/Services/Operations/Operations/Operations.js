@@ -10,7 +10,7 @@ const Operations = () => {
             .then(data => setOperations(data))
     }, []);
     return (
-        <Container className="mt-4">
+        <Container className="my-4">
             <h2 className="mb-3">operations</h2>
             <Row xs={1} md={3} className="g-4 rounded-lg">
 

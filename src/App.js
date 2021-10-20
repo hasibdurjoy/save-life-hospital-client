@@ -14,6 +14,7 @@ import Nurses from './pages/home/Services/Nurses/Nurses/Nurses';
 import Doctors from './pages/home/Services/Doctors/Doctors/Doctors';
 import Pathologies from './pages/home/Services/Pathologies/Pathologies/Pathologies';
 import Ambulances from './pages/home/Services/AmbulanceService/Ambulances/Ambulances';
+import IcuServices from './pages/home/Services/IcuServices/IcuServices/IcuServices';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <PrivateRoute path="/pathology"><Pathologies /></PrivateRoute>
             <PrivateRoute path="/ambulances"><Ambulances /></PrivateRoute>
             <PrivateRoute path="/nurses"><Nurses /></PrivateRoute>
+            <PrivateRoute path="/icu"><IcuServices /></PrivateRoute>
             <PrivateRoute path="/services/:serviceID"><ServiceDetails /></PrivateRoute>
             <Route path="*"><NotFound /></Route>
           </Switch>

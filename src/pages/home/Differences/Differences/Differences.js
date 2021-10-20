@@ -10,7 +10,7 @@ const Differences = () => {
             .then(data => setDifferences(data))
     }, [])
     return (
-        <Container className="mt-4">
+        <Container className=" my-5">
             <h2 className="mb-3">Why You Choose Us ? we have</h2>
             <Row xs={2} md={4} className="g-4 rounded-lg">
 
