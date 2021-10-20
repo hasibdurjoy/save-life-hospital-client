@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import './Header.css';
@@ -29,13 +29,16 @@ const Header = () => {
                     <Nav className="me-auto">
                     </Nav>
                     <Nav className="me-auto">
-                        <NavLink to="/home" activeStyle={navStyle}>Home</NavLink>
-                        <NavLink to="/services" activeStyle={navStyle}>Services</NavLink>
-                        <NavLink to="/doctors" activeStyle={navStyle}>Doctors</NavLink>
-                        <NavLink to="/pathology" activeStyle={navStyle}>Pathology</NavLink>
-                        <NavLink to="/ambulances" activeStyle={navStyle}>Ambulances</NavLink>
-                        <NavLink to="/nurses" activeStyle={navStyle}>Nurses</NavLink>
-                        <NavLink to="/icu" activeStyle={navStyle}>ICU</NavLink>
+                        <Nav.Link as={NavLink} to="/home" activeStyle={navStyle}>Home</Nav.Link>
+                        <Nav.Link as={NavLink} to="/services" activeStyle={navStyle}>Services</Nav.Link>
+                        <Nav.Link as={NavLink} to="/doctors" activeStyle={navStyle}>Doctors</Nav.Link>
+                        <Nav.Link as={NavLink} to="/nurses" activeStyle={navStyle}>Nurses</Nav.Link>
+                        <NavDropdown title="Others" id="navbarScrollingDropdown">
+                            <NavLink to="/pathology" activeStyle={navStyle}>Pathology</NavLink> <br />
+                            <NavLink to="/ambulances" activeStyle={navStyle}>Ambulances</NavLink> <br />
+                            <NavLink to="/icu" activeStyle={navStyle}>ICU</NavLink>
+                        </NavDropdown>
+                        <Nav.Link as={NavLink} to="/appointment" activeStyle={navStyle}>Appointment</Nav.Link>
                     </Nav>
                     <Nav>
 

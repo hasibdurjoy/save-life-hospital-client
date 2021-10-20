@@ -45,10 +45,10 @@ const Footer = () => {
                     <p>Chittagong : +99999999844</p>
                 </div>
                 <div className="col-lg-3 col-md-3  ">
-                    <p><i className="fas fa-envelope"></i> Stay up to date</p>
-                    <input type="email" name="" id="" className="bg-dark text-light border-0 p-3" placeholder="Enter your e-mail address" />
+                    <p><i className="fas fa-envelope"></i> Any query??</p>
+                    <input type="email" name="" id="" className="bg-dark text-light border-0 p-3" placeholder="your opinion about us" />
                     <div className="text-center mt-3">
-                        <button onClick={signUp} className="btn-danger btn rounded">Sign Up</button>
+                        <button onClick={signUp} className="btn-danger btn rounded">Send mail</button>
                     </div>
 
                 </div>
