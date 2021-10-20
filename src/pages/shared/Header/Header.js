@@ -41,12 +41,14 @@ const Header = () => {
 
                         {
                             user?.email ? <>
-                                <Nav.Link className="btn btn-light rounded-pill mx-3 px-3 text-dark">{user.displayName}</Nav.Link>
-                                <Nav.Link onClick={logOut} as={Link} to="/" className="btn btn-danger rounded-pill text-light px-3">Logout</Nav.Link>
+                                <Nav.Link className="text-dark"><button className="btn btn-light rounded-pill">{user.displayName}</button></Nav.Link>
+
+                                <Nav.Link onClick={logOut} as={Link} to="/" className="text-light"><button className="btn btn-danger rounded-pill">Log Out</button></Nav.Link>
                             </>
                                 : <>
-                                    <Nav.Link as={Link} to="/login" className="btn btn-danger px-4 rounded-pill text-light me-2">Login</Nav.Link>
-                                    <Nav.Link as={Link} to="/register" className="btn btn-primary px-4 rounded-pill text-light">Register</Nav.Link>
+                                    <Nav.Link as={Link} to="/login" className=" text-light"><button className="btn btn-danger rounded-pill">Login</button></Nav.Link>
+
+                                    <Nav.Link as={Link} to="/register" className="text-light"><button className="btn btn-primary rounded-pill">Register</button></Nav.Link>
                                 </>
                         }
                     </Nav>
